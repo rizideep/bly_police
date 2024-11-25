@@ -7,6 +7,7 @@ import 'package:http/http.dart';
 import '../server_api/server_constant.dart';
 import '../server_api/server_response.dart';
 import '../utils/app_constant.dart';
+import '../utils/util.dart';
 import 'app_events.dart';
 import 'app_repository.dart';
 import 'app_states.dart';
@@ -44,6 +45,7 @@ class AppBloc extends Bloc<AppEvent, AppStates> {
   }
 
   tigerEventsByTypes(AppEvent event) async {
+    
     if (event is LoginEvent) {
       return await _loginRepository.userLoginApi(event);
     }

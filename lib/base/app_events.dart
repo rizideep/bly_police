@@ -1,6 +1,14 @@
+import 'dart:ui';
+
 class AppEvent {}
 
 class InitialEvent extends AppEvent {}
+
+class ChangeLocale extends AppEvent {
+  final Locale locale;
+
+  ChangeLocale(this.locale);
+}
 
 class LoginEvent extends AppEvent {
   late String mobileNumber;

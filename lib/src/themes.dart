@@ -6,6 +6,12 @@ import 'app_colors.dart';
 
 final lightTheme = ThemeData(
   cardColor: backgroundColor,
+  canvasColor: colorWhite,
+  dropdownMenuTheme: DropdownMenuThemeData(
+    menuStyle: MenuStyle(
+      backgroundColor: MaterialStateProperty.all(Colors.orange[50]),
+    ),
+  ),
   appBarTheme: const AppBarTheme(
     systemOverlayStyle: SystemUiOverlayStyle.dark, // 2
   ),
@@ -18,9 +24,9 @@ final lightTheme = ThemeData(
   colorScheme: ColorScheme.fromSwatch().copyWith(
     primary: primaryColor,
     onPrimary: onPrimaryColor,
-    surfaceContainerHighest: onBackgroundColor,
     primaryContainer: primaryContainerColor,
     onPrimaryContainer: onPrimaryContainerColor,
+    surfaceContainerHighest: onBackgroundColor,
     secondary: secondaryColor,
     onSecondary: onSecondaryColor,
     secondaryContainer: secondaryColor,
